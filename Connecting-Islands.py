@@ -9,7 +9,6 @@ def graph(bridge_config, num_islands):
         cost = config[2]
         adjecency_list[source].append((destination, cost))
         adjecency_list[destination].append((source, cost))
-    print(adjecency_list)
     return adjecency_list
 
 def minimum_cost(graph):
@@ -30,6 +29,15 @@ def minimum_cost(graph):
 
 num_islands = 4
 bridge_config = [[1, 2, 1], [2, 3, 4], [1, 4, 3], [4, 3, 2], [1, 3, 10]]
-graph = graph(bridge_config, num_islands)
-cost = minimum_cost(graph)
-print(cost)
+graph1 = graph(bridge_config, num_islands)
+print("Pass" if minimum_cost(graph1) == 6 else "Fail")
+
+num_islands = 5
+bridge_config = [[1, 2, 5], [1, 3, 8], [2, 3, 9]]
+graph2 = graph(bridge_config, num_islands)
+print("Pass" if minimum_cost(graph2) == 13 else "Fail")
+
+num_islands = 5
+bridge_config = [[1, 2, 3], [1, 5, 9], [2, 3, 10], [4, 3, 9]]
+graph3 = graph(bridge_config, num_islands)
+print("Pass" if minimum_cost(graph3) == 31 else "Fail")
