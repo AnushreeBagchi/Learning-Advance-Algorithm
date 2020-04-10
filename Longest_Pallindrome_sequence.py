@@ -18,6 +18,6 @@ def max_pallindrome(string):
     # pp.pprint(lookup)
     return lookup[0][length-1]
 
-print("Pass" if max_pallindrome("BANANA") == 5 else "Fail");
-print("Pass" if max_pallindrome("BANANO") == 3 else "Fail");
-print("Pass" if max_pallindrome("TACOCAT") == 7 else "Fail");
+print("Pass" if max_pallindrome("BANANA") == 5 else "Fail")
+print("Pass" if max_pallindrome("BANANO") == 3 else "Fail")
+print("Pass" if max_pallindrome("TACOCAT") == 7 else "Fail")
