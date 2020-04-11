@@ -1,4 +1,5 @@
-def min_coins(coins, target):
+# Brute force method to get minimum number of coins required to get target
+def min_coins_brute_force(coins, target):
     amount = 0
     count = 0
     while len(coins)>0:
@@ -13,6 +14,6 @@ def min_coins(coins, target):
     else:
         return count
 
-print("Pass" if min_coins([1,2,5], 11) == 3 else "Fail")
-print("Pass" if min_coins([1,4,5,6], 23) == 4 else "Fail")
-print("Pass" if min_coins([5,7,8], 2) == -1 else "Fail")
+print("Pass" if min_coins_brute_force([1,2,5], 11) == 3 else "Fail")
+print("Pass" if min_coins_brute_force([1,4,5,6], 23) == 4 else "Fail")
+print("Pass" if min_coins_brute_force([5,7,8], 2) == -1 else "Fail")
